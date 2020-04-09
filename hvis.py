@@ -25,12 +25,13 @@ for i, typ in enumerate(x):
     result[i] = out
 
 plt.figure()
+plt.rcParams.update({'font.size': 15})
 plt.title('q=2')
 plt.plot(x,result)
 plt.xlabel(r'$\log_q\lambda$')
 plt.ylabel('entropy (nats)')
 plt.tight_layout()
-plt.savefig('h_q_'+str(q)+'.jpg')
+plt.savefig('h_q_'+str(q)+'.pdf')
 
 
 
@@ -59,6 +60,7 @@ for j, myq in enumerate(q):
         result[j,i] = out
 
 plt.figure()
+plt.rcParams.update({'font.size': 15})
 plt.title('q=2,4,16')
 plt.plot(x,result[0],label='q=2')
 plt.plot(x,result[1],label='q=4')
@@ -67,4 +69,4 @@ plt.xlabel(r'$\log_q\lambda$')
 plt.ylabel('entropy (nats)')
 plt.legend()
 plt.tight_layout()
-plt.savefig('h_q_2_4_16.jpg')
+plt.savefig('h_q_2_4_16.pdf')
